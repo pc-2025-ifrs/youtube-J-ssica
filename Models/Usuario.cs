@@ -20,7 +20,7 @@ namespace trabalho.Model
             }
 
 
-            public List<Canais> Inscricoes
+            public List<Canal> Inscricoes
             {
                   get; set;
             } = [];

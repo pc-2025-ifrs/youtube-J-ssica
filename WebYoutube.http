@@ -7,6 +7,7 @@ Accept: application/json
 
 POST {{host}}/api/v1/canais
 Content-Type: application/json
+
 {
     "nome": "Receitas Culinárias da Marta"
 }

@@ -1,3 +1,5 @@
+using trabalho.Model;
+
 namespace trabalho.Repositories;
 
 //concreto
@@ -9,7 +11,7 @@ public class InMemoryCanalRepository : ICanalRepository
 
     public void Save(Canal canal)
     {
-        canal.Id = Guid.NewGuid();
+        var Id = Guid.NewGuid();
         // _memory.Add(canal.Id, canal);
         canal.Id = Id;
         _memory[Id] = canal;

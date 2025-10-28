@@ -5,7 +5,7 @@ using trabalho.Repositories;
 namespace WebYoutube.Controllers;
 
 [ApiController]
-[Route("api/v1/[controller]")]
+[Route("api/v1/canais")]
 public class CanaisController : ControllerBase
 {
     private readonly ILogger<WeatherForecastController> _logger;
@@ -18,7 +18,7 @@ public class CanaisController : ControllerBase
         _canalRepository = canalRepository;
     }
 
-    [httpPost(Name = "NewCanal")]
+    [HttpPost(Name = "NewCanal")]
     public IActionResult NewCanal([FromBody] newCanalDTO canal) 
     {
         _canalRepository.Save(new Canal
@@ -29,11 +29,11 @@ public class CanaisController : ControllerBase
     }
 
     [HttpGet(Name = "GetAllCanais")]
-    public ActionResult<Enumerable<Canais>> GetAll()
+    public ActionResult<IEnumerable<Canal>> GetAll()
     {
        return Ok(_canalRepository.GetAll());
     }
 }
 //não é model representa o payload
-public record class newCanalDTO(string nome);
+public record class newCanalDTO(string Nome);
 

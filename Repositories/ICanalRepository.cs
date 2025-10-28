@@ -1,3 +1,5 @@
+using trabalho.Model;
+
 namespace trabalho.Repositories;
 
 public interface ICanalRepository
