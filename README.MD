@@ -1,0 +1,5 @@
+### 
+
+Requisição -> Controller -> Model
+                    -> Persistência
+         <--------
